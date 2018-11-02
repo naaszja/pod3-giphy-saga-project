@@ -1,17 +1,14 @@
-CREATE DATABASE "garden";
+CREATE DATABASE "giphy_search_favorites";
 
-CREATE TABLE "plant" (
+-- You'll need a table for storing each giphy image favorite
+
+-- Each favorite image can be assigned 1 category
+
+-- Category table
+CREATE TABLE "category" (
     "id" SERIAL PRIMARY KEY,
-    "name" VARCHAR (100) NOT NULL,
-    "kingdom" VARCHAR (100),
-    "clade" VARCHAR (100),
-    "order" VARCHAR (100),
-    "family" VARCHAR (100),
-    "subfamily" VARCHAR (100),
-    "genus" VARCHAR (100)
+    "name" VARCHAR (100) NOT NULL
 );
 
-INSERT INTO "plant" ("name", "kingdom", "clade", "order", "family", "subfamily", "genus")
-VALUES ('Rose', 'Plantae', 'Angiosperms', 'Rosales', 'Rosaceae', 'Rosoideae', 'Rosa'),
-('Tulip', 'Plantae', 'Angiosperms', 'Liliales', 'Liliaceae', 'Lilieae', 'Tulipa'),
-('Oak', 'Plantae', 'Angiosperms', 'Fagales', 'Fagaceae', NULL, 'Quercus');
+INSERT INTO "category" ("name")
+VALUES ('funny', 'sirius', 'cartoon', 'nsfw', 'meme');
