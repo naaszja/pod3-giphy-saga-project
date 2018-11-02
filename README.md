@@ -5,15 +5,6 @@ This week you will be building a Giphy searching and favoriting application whic
 In this project you will need to utilize React, Redux, Sagas and integrate them with a 3rd party API....all in a group project!
 
 
-## Prerequisites
-
-Before you get started, make sure you have the following software installed on your computer:
-
-- [Node.js](https://nodejs.org/en/)
-- [PostrgeSQL](https://www.postgresql.org/)
-- [Nodemon](https://nodemon.io/)
-
-
 ## Create Database and Tables
 
 See the `database.sql` file for database setup and details. It offers some of the SQL to get you started but you'll need to set up your tables and the relationships between them. 
@@ -53,17 +44,14 @@ You will need 2 views for the Base Features. You should put some thought into th
 
 You are given two router modules on the server with stubs for the routes you may need.
 
-> `GET /api/category` (complete)
+- `GET /api/category` (complete)
+    - returns a list of all categories from the table ordered by name. You may test it if your server is running: [http://localhost:5000/api/category](http://localhost:5000/api/category)
 
-returns a list of all categories from the table ordered by name. You may test it if your server is running: [http://localhost:5000/api/category](http://localhost:5000/api/category)
+- `POST /api/favorite` (incomplete)
+    - for adding a new favorite image. You'll need to think about what is needed. Does it need a category?
 
-> `POST /api/favorite` (incomplete)
-
-for adding a new favorite image. You'll need to think about what is needed. Does it need a category?
-
-> `PUT /api/favorite` (incomplete)
-
-for setting a category on an image. It expects both a query parameter and a data body. Feel free to change it.
+- `PUT /api/favorite` (incomplete)
+    - for setting a category on an image. It expects both a query parameter and a data body. Feel free to change it.
 
 
 ## Stretch Features
