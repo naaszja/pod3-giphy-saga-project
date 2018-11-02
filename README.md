@@ -28,7 +28,7 @@ See the `database.sql` file for database setup and details. It offers some of th
 * Navigate to `localhost:3000`
 
 
-## Base Mode
+## Base Features
 
 You will need 2 views for Base Mode. You should put some thought into the UI and how to style it.
 
