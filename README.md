@@ -29,7 +29,7 @@ See the `database.sql` file for database setup and details. It offers some of th
 
 You are given two router modules on the server with stubs for the routes you may need.
 
-`GET /category` returns a list of all categories from the table ordered by name.
+`GET /category` returns a list of all categories from the table ordered by name. You may test it if your server is running: [http://localhost:5000/api/category](http://localhost:5000/api/category)
 
 
 ## Base Mode
