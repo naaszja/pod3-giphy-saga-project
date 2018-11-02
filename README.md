@@ -45,10 +45,9 @@ You will need 2 views for Base Mode.
     - The category needs to be one of the categories in the database
 
 
-## Stretch Goals
+## Stretch Features
 
 1. Allow favorites to be removed/unfavorited
 2. Implement the pagination feature of the Giphy search results
 3. Add another view that allows a user to add or edit categories
-4. Add `material-ui` to the project to 
 
