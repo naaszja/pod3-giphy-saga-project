@@ -1,5 +1,8 @@
 # Giphy Search and Favorites
 
+In this project you will need to utilize React, Redux, and Sagas and integrate them with a 3rd party API....all in a group project!
+
+
 ## Prerequisites
 
 Before you get started, make sure you have the following software installed on your computer:
@@ -8,9 +11,9 @@ Before you get started, make sure you have the following software installed on y
 - [PostrgeSQL](https://www.postgresql.org/)
 - [Nodemon](https://nodemon.io/)
 
-## Create database and table
+## Create Database and Tables
 
-See the `database.sql` file for database setup and details.
+See the `database.sql` file for database setup and details. It offers some of the SQL to get you started but you'll need to set up your tables and the relationships between them. 
 
 
 ## Development Setup Instructions
@@ -21,28 +24,33 @@ See the `database.sql` file for database setup and details.
 * Run `npm run client` to start the client
 * Navigate to `localhost:3000`
 
+
 ## Existing Routes
+
+You are given two router modules on the server with stubs for the routes you may need.
 
 `GET /category` returns a list of all categories from the table ordered by name.
 
 
 ## Base Mode
 
-You will need 2 views for Base Mode.
+You will need 2 views for Base Mode. You should put some thought into the UI and how to style it.
+
 
 ### Search View
 
-- Allow a user to enter a search string and submit a search request
+- Allow a user to enter a search string and submit a search request.
 - Query the Giphy API `/search` endpoint with the given search string FROM THE SERVER.
-- Display the results on the DOM
+- Display the results on the DOM.
 - Allow a user to Favorite any of the result images. You'll need to think about what information to save to your own database. Generally you only store the minimum needed to show this image again on the Favorites view.
+
 
 ### Favorites View
 
-- Allow a user to see all of the Giphy images they have Favorited. The actual images need to appear on the DOM
-- Allow a user to set a category for a favorite image
-    - Each favorite image can only have 1 category at a time
-    - The category needs to be one of the categories in the database
+- Allow a user to see all of the Giphy images they have Favorited. The actual images need to appear on the DOM.
+- Allow a user to set a category for a favorite image.
+    - Each favorite image can only have 1 category at a time.
+    - The category needs to be one of the categories in the database.
 
 
 ## Stretch Features
