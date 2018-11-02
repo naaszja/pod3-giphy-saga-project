@@ -53,7 +53,9 @@ You will need 2 views for the Base Features. You should put some thought into th
 
 You are given two router modules on the server with stubs for the routes you may need.
 
-`GET /category` returns a list of all categories from the table ordered by name. You may test it if your server is running: [http://localhost:5000/api/category](http://localhost:5000/api/category)
+`GET /api/category` returns a list of all categories from the table ordered by name. You may test it if your server is running: [http://localhost:5000/api/category](http://localhost:5000/api/category)
+
+`/api/favorite` has empty routes for you.
 
 
 ## Stretch Features
