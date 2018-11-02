@@ -53,9 +53,17 @@ You will need 2 views for the Base Features. You should put some thought into th
 
 You are given two router modules on the server with stubs for the routes you may need.
 
-`GET /api/category` returns a list of all categories from the table ordered by name. You may test it if your server is running: [http://localhost:5000/api/category](http://localhost:5000/api/category)
+> `GET /api/category` (complete)
 
-`/api/favorite` has empty routes for you.
+returns a list of all categories from the table ordered by name. You may test it if your server is running: [http://localhost:5000/api/category](http://localhost:5000/api/category)
+
+> `POST /api/favorite` (incomplete)
+
+for adding a new favorite image. You'll need to think about what is needed. Does it need a category?
+
+> `PUT /api/favorite` (incomplete)
+
+for setting a category on an image. It expects both a query parameter and a data body. Feel free to change it.
 
 
 ## Stretch Features
