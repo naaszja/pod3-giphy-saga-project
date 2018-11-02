@@ -30,7 +30,7 @@ See the `database.sql` file for database setup and details. It offers some of th
 
 ## Base Features
 
-You will need 2 views for Base Mode. You should put some thought into the UI and how to style it.
+You will need 2 views for the Base Features. You should put some thought into the UI and how to style it.
 
 
 ### Search View
@@ -60,5 +60,5 @@ You are given two router modules on the server with stubs for the routes you may
 
 1. Allow favorites to be removed/unfavorited
 2. Implement the pagination feature of the Giphy search results
-3. Add another view that allows a user to add or edit categories
+3. Add another view that allows a user to manage (create, edit, delete) categories
 
