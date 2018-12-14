@@ -4,6 +4,9 @@ This week you will be building a Giphy searching and favoriting application whic
 
 In this project you will need to utilize React, Redux, Sagas and integrate them with a 3rd party API....all in a group project!
 
+## Team Setup
+Do not clone this repository. Instead, have one person download the zip, extract the contents, `git init`, `git add .`, `git commit -m "initial commit - base project"` and add your remote. Make your team collaborators. Have them clone directly from the person who did the setup, not fork.
+
 
 ## Create Database and Tables
 
