@@ -60,6 +60,7 @@ You are given two router modules on the server with stubs for the routes you may
 ## Stretch Features
 
 1. Allow favorites to be removed/unfavorited
-2. Implement the pagination feature of the Giphy search results
-3. Add another view that allows a user to manage (create, edit, delete) categories
+2. Allow for a favorite to have many categories
+3. Implement the pagination feature of the Giphy search results
+4. Add another view that allows a user to manage (create, edit, delete) categories
 
