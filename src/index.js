@@ -24,7 +24,8 @@ function* fetchFavorites() {
 
 function* addFavorite() {
   try {
-    yield axios.post('api/favorite', action.payload);
+    yield axios.post('api/favorite', action.payload );
+    yield put({ type: 'FETCH_FAVORITES' })
     yield put({ type: 'FETCH_FAVORITES' })
   } catch {
 
