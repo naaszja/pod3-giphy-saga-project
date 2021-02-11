@@ -1,7 +1,9 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
+import ReactGiphySearchbox from "react-giphy-searchbox";
 
 function App(props) {
+  
   return (
    <>
       <header>
@@ -18,6 +20,7 @@ function App(props) {
               { columns: 2, imageWidth: 150},
               { mq: "900px", columns: 10, imageWidth: 120, gutter: 5 }
             ]}
+            
           />
       </div>
     </>
