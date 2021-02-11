@@ -4,8 +4,9 @@ CREATE DATABASE "giphy_search_favorites";
 -- Each favorite image can be assigned 1 of the following categories as a Foreign Key
 CREATE TABLE "favorites" (
     "id" SERIAL PRIMARY KEY,
-    "name"  VARCHAR (100) NOT NULL
-    "url" VARCHAR (100) NOT NULL
+    "title"  VARCHAR (100) NOT NULL,
+    "url" VARCHAR (100) NOT NULL,
+    "category_id" integer REFERENCES category
 );
 
 -- Category table
