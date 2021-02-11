@@ -27,6 +27,7 @@ if (process.env.DATABASE_URL) {
     idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
   };
 } else {
+  // pg Pool configuration for local development
   config = {
     host: 'localhost', // Server hosting the postgres database
     port: 5432, // env var: PGPORT
