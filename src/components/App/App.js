@@ -6,7 +6,9 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 function App(props) {
-
+  console.log('App is rendering');
+  const dispatch = useDispatch();
+  
   return (
     <>
       <header>
@@ -18,7 +20,11 @@ function App(props) {
       <div className="searchboxWrapper">
         <ReactGiphySearchbox
           apiKey="Z1gSUoqXSaGAFhnFmTWCVpg9uBRoAdXk"
-          onSelect={(item) => console.log(item, item.url, item.id)}
+          onSelect={(item) => dispatch({ 
+            type: 'ADD_FAVORITE', 
+            payload: {item: item.title, item: item.url }
+          })}
+          
           masonryConfig={[
             { columns: 2, imageWidth: 150 },
             { mq: "900px", columns: 10, imageWidth: 120, gutter: 5 }

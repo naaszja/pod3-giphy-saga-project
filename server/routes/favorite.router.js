@@ -35,7 +35,7 @@ router.post('/', (req, res) => {
   .catch(error => {
     console.log(`Error adding new book`, error);
     res.sendStatus(500);
-  })
+  });
   
 });
 
