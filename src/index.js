@@ -36,6 +36,8 @@ function* addFavorite() {
   yield takeEvery('ADD_FAVORITE', addFavorite);
 }
 
+
+
 // Instantiate middleware
 const sagaMiddleware = createSagaMiddleware();
 
@@ -50,10 +52,23 @@ const favoritesReducer = (state = [], action) => {
   return state;
 }
 
+const favoritesList = (state = [], action) => {
+  console.log(action, state);
+  if (action.type === 'ADD_FAVORITE') {
+    return action.payload;
+  } else if (action.type === 'CLEAR_FAVORITES') {
+    return []
+  }
+  return state;
+}
+
+
+
 // Create one store that all components can use
 const storeInstance = createStore(
   combineReducers({
      favoritesReducer,
+     favoritesList
   }),
   // Add sagaMiddleware to our store
   applyMiddleware(sagaMiddleware, logger),
