@@ -22,7 +22,10 @@ function App(props) {
           apiKey="Z1gSUoqXSaGAFhnFmTWCVpg9uBRoAdXk"
           onSelect={(item) => dispatch({ 
             type: 'ADD_FAVORITE', 
-            payload: {item: item.title, item: item.url }
+            payload: {
+              url: item.url,
+              title: item.title,
+            }
           })}
           
           masonryConfig={[
