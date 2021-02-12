@@ -1,36 +1,35 @@
-import { useSelector, useDispatch } from 'react-redux'
-import { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function FavoritesList() {
-    const favoritesList = useSelector(store => store.favoritesList);
-    const dispatch = useDispatch();
-    const history = useHistory();
 
-    const setFavoritesDetails = (favorite) => {
-        // alert(`You want to see details for book ${book.title}`);
-        // GOAL: Set the 'book details' info to this book
-        // Direct the user to the Book Details page
-        dispatch({
-            type: 'ADD_FAVORITE',
-            payload: { url: item.url,
-                    title: item.title
-            }
-        });
+    let [favoritesList, setFavoritesList] = useState([]);
 
-        history.push('/details');
+    const getFavorites = () => {
+        axios.get('/api/favorite')
+            .then((response) => {
+                setFavoritesList(response.data);
+                console.log('Store updated');
+            }).catch((err) => {
+                console.log('Error in getFavorites function', err);
+            })
     }
+
+    useEffect(() => {
+        getFavorites();
+    }, []);
 
     return (
         <section>
             <h2>All Favorites</h2>
             <ul>
-                {favoritesList.map((favorite, index) =>
-                    <li key={index}>{favorite.title} url {favorite.url}
+                {favoritesList.map(favorite => (
+                    <li key={favorite.id}>{favorite.title} 
+                    <p><img src={favorite.url} alt="GIF broken"/></p>
                         <button onClick={() => setFavoritesDetails(favorite)}>View Details 1</button>
                         <button onClick={() => history.push(`/details/${favorite.id}`)}>View Details 2</button>
                     </li>
-                )}
+                ))}
             </ul>
         </section>
     );
