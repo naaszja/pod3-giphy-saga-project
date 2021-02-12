@@ -1,18 +1,12 @@
 import ReactGiphySearchbox from "react-giphy-searchbox";
-import { useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 function SearchComponent(props) {
     console.log('Search Component is rendering');
     const dispatch = useDispatch();
-    //const [setFavorite, setFavoriteGif] = useState('')
-
-    // useEffect(() => {
-    //   dispatch({ type: 'FETCH_FAVORITES' })
-
-    // }, []);
+    const history = useHistory();
 
 
 
@@ -31,7 +25,7 @@ function SearchComponent(props) {
                     onSelect={(item) => dispatch({
                         type: 'ADD_FAVORITE',
                         payload: {
-                            url: item.url,
+                            src: item.images.original.url,
                             title: item.title,
                         }
                     })}
@@ -40,9 +34,10 @@ function SearchComponent(props) {
                         { columns: 2, imageWidth: 110, gutter: 5 },
                         { mq: "700px", columns: 10, imageWidth: 120, gutter: 5 }
                     ]}
-
+                    
                 />
-            </div>
+                <button onClick={() => history.push('./favorites')}>Favorites Page</button>
+                </div>
 
         </>
     );
