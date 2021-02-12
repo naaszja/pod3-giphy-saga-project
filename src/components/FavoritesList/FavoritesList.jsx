@@ -26,8 +26,8 @@ function FavoritesList() {
                 {favoritesList.map(favorite => (
                     <li key={favorite.id}>{favorite.title} 
                     <p><img src={favorite.url} alt="GIF broken"/></p>
-                        <button onClick={() => setFavoritesDetails(favorite)}>View Details 1</button>
-                        <button onClick={() => history.push(`/details/${favorite.id}`)}>View Details 2</button>
+                        {/* {/* <button onClick={() => setFavoritesDetails(favorite)}>View Details 1</button> */}
+                        <button>Unfavorite</button> 
                     </li>
                 ))}
             </ul>
