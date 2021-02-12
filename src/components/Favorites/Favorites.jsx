@@ -1,6 +1,6 @@
 import React from 'react';
 // import './App.css';
-import ReactGiphySearchbox from "react-giphy-searchbox";
+// import ReactGiphySearchbox from "react-giphy-searchbox";
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 

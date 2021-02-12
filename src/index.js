@@ -24,8 +24,7 @@ function* fetchFavorites() {
 
 function* addFavorite() {
   try {
-    yield axios.post('api/favorite', action.payload );
-    yield put({ type: 'FETCH_FAVORITES' })
+    yield axios.post('/favorite', action.payload );
     yield put({ type: 'FETCH_FAVORITES' })
   } catch {
 
@@ -43,7 +42,7 @@ const sagaMiddleware = createSagaMiddleware();
 // favoritiesReducer
 const favoritesReducer = (state = [], action) => {
   console.log(action, state);
-  if (action.type === 'SET_FAVORITES') {
+  if (action.type === 'ADD_FAVORITE') {
     return action.payload;
   } else if (action.type === 'CLEAR_FAVORITES') {
     return []

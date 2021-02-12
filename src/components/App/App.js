@@ -2,13 +2,15 @@ import React from 'react';
 // import './App.css';
 import ReactGiphySearchbox from "react-giphy-searchbox";
 import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
 
 function App(props) {
   console.log('App is rendering');
   const dispatch = useDispatch();
-  
+  //const [setFavorite, setFavoriteGif] = useState('')
+
   return (
     <>
       <header>
@@ -20,6 +22,7 @@ function App(props) {
       <div className="searchboxWrapper">
         <ReactGiphySearchbox
           apiKey="Z1gSUoqXSaGAFhnFmTWCVpg9uBRoAdXk"
+         // onSelect={(event) => setFavoriteGif(event.target.value)}
           onSelect={(item) => dispatch({ 
             type: 'ADD_FAVORITE', 
             payload: {
